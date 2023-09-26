@@ -1,0 +1,23 @@
+
+virtualbox 설치
+https://www.virtualbox.org/ 
+
+virtualbox 확장팩(VM VirtualBox Extension Pack) 설치
+
+
+vagrant 설치
+https://www.vagrantup.com/
+
+
+vagrant plugin 설치
+https://github.com/devopsgroup-io/vagrant-hostmanager
+https://github.com/leighmcculloch/vagrant-docker-compose
+
+Vagrantfile 이 있는 폴더에서 실행
+vagrant up
+
+db url : 192.168.100.100:3306
+id/pw  :root
+
+스키마 생성
+CREATE SCHEMA `medifun_mts` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin ;
