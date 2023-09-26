@@ -1,0 +1,57 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    build: ./rabbitmq
+    ports:
+      - 15672:15672
+      - 15675:15675
+      - 1883:1883
+
+#  proxy:
+#    build: ./proxy
+#    ports:
+#      - 80:80
+#      - 443:443
+#    volumes:
+#        - /etc/letsencrypt:/etc/letsencrypt
+#    depends_on:
+#      - front_end
+#      - back_end
+  mysql:
+    image: mysql:8
+    ports:
+     - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+#      MYSQL_ROOT_PASSWORD: 9999
+    volumes:
+     - mysql_volume:/var/lib/mysql
+
+#  front_end:
+#    build: ./front_end
+
+
+#  back_end:
+#    build: ./back_end
+#    ports:
+#      - 8080:8080
+
+
+  block_chain:
+    build: ./flaskProjectBC2
+    ports:
+      - 5000:5000
+
+#    depends_on:
+#      - mysql
+
+volumes:
+ mysql_volume:
+
+#networks:
+#  has_net:
+#    driver: bridge
+
+
+

@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+
+
+  block_chain:
+    build: .
+    ports:
+      - 5000:5000
+
+#    depends_on:
+#      - mysql
+
+#volumes:
+#  mysql_volume:
+
+#networks:
+#  has_net:
+#    driver: bridge
+
+
+
