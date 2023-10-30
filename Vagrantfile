@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "docker4dev" do |config|
     config.vm.box = "ubuntu/jammy64"
     config.vm.hostname = "docker4dev"
-    config.vm.network "private_network", ip: "192.168.100.100"
+    config.vm.network "private_network", ip: "192.168.56.100"
     config.vm.provider "virtualbox" do |vb|
       vb.name = "docker4dev"
       vb.cpus = 2
